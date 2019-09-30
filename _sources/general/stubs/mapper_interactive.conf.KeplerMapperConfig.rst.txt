@@ -1,0 +1,32 @@
+mapper\_interactive.conf.KeplerMapperConfig
+===========================================
+
+.. currentmodule:: mapper_interactive.conf
+
+.. autoclass:: KeplerMapperConfig
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~KeplerMapperConfig.__init__
+      ~KeplerMapperConfig.configure
+      ~KeplerMapperConfig.run_mapper
+      ~KeplerMapperConfig.set_data
+      ~KeplerMapperConfig.set_lens
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~KeplerMapperConfig.mapper
+   
+   

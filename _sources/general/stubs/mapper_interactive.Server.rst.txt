@@ -1,0 +1,31 @@
+mapper\_interactive.Server
+==========================
+
+.. currentmodule:: mapper_interactive
+
+.. autoclass:: Server
+
+   
+   .. automethod:: __init__
+
+   
+   .. rubric:: Methods
+
+   .. autosummary::
+   
+      ~Server.__init__
+      ~Server.register_function
+      ~Server.set_config_js
+      ~Server.set_user_specs
+   
+   
+
+   
+   
+   .. rubric:: Attributes
+
+   .. autosummary::
+   
+      ~Server.flask
+   
+   

@@ -1,0 +1,177 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>KM Configuration &#8212; Mapper Interactive 1.2 documentation</title>
+    <link rel="stylesheet" href="../_static/better.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Getting Started Guide" href="started.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  </head><body>
+    <header id="pageheader">
+      <h1>
+        <a href="../index.html ">
+          Mapper Interactive 1.2 documentation
+        </a>
+        <a id="headermeta" href="https://scikit-tda.org">
+            a scikit-tda project 
+        </a>
+      </h1> 
+  </header>
+  <div class="related top">
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="started.html" title="Previous document">Getting Started Guide</a>
+        </li>
+    </ul>
+  </nav>
+  <nav id="breadcrumbs">
+    <ul>
+      <li><a href="../index.html">Mapper Interactive</a></li>
+      <li>
+        <a href="index.html">Kepler Mapper Interactive</a>
+      </li> 
+    </ul>
+  </nav>
+  </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="km-configuration">
+<span id="id1"></span><h1>KM Configuration<a class="headerlink" href="#km-configuration" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="form-loader">
+<h2>Form loader<a class="headerlink" href="#form-loader" title="Permalink to this headline">¶</a></h2>
+<p>Variables types are <code class="code docutils literal notranslate"><span class="pre">range</span></code> or <code class="code docutils literal notranslate"><span class="pre">dropdown</span></code>.</p>
+<p><code class="code docutils literal notranslate"><span class="pre">range</span></code> takes the form</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;range&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;config&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="o">&lt;</span><span class="nx">Variable</span> <span class="nx">name</span><span class="o">&gt;</span><span class="p">,</span>
+        <span class="s2">&quot;label&quot;</span><span class="o">:</span> <span class="o">&lt;</span><span class="nx">Display</span> <span class="nx">name</span><span class="o">&gt;</span><span class="p">,</span>
+        <span class="s2">&quot;value&quot;</span><span class="o">:</span> <span class="o">&lt;</span><span class="nx">Default</span> <span class="nx">value</span><span class="o">&gt;</span><span class="p">,</span>
+        <span class="s2">&quot;max&quot;</span><span class="o">:</span> <span class="o">&lt;</span><span class="nx">Max</span> <span class="nx">value</span><span class="o">&gt;</span><span class="p">,</span>
+        <span class="s2">&quot;min&quot;</span><span class="o">:</span> <span class="o">&lt;</span><span class="nx">Min</span> <span class="nx">value</span><span class="o">&gt;</span><span class="p">,</span>
+        <span class="s2">&quot;step&quot;</span><span class="o">:</span> <span class="o">&lt;</span><span class="nx">Step</span><span class="o">&gt;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>and <code class="code docutils literal notranslate"><span class="pre">dropdown</span></code> takes the form</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;dropdown&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;config&quot;</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="o">&lt;</span><span class="nx">Variable</span> <span class="nx">name</span><span class="o">&gt;</span><span class="p">,</span>
+        <span class="s2">&quot;label&quot;</span><span class="o">:</span> <span class="o">&lt;</span><span class="nx">Display</span> <span class="nx">name</span><span class="o">&gt;</span><span class="p">,</span>
+        <span class="s2">&quot;options&quot;</span><span class="o">:</span> <span class="o">&lt;</span><span class="nx">List</span> <span class="k">of</span> <span class="nx">options</span><span class="o">&gt;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Current supported Range variables are <code class="code docutils literal notranslate"><span class="pre">interval</span></code>, <code class="code docutils literal notranslate"><span class="pre">overlap</span></code>,
+<code class="code docutils literal notranslate"><span class="pre">dbscan_eps</span></code>, <code class="code docutils literal notranslate"><span class="pre">dbscan_min_samples</span></code>. For Dropdown type variables, <code class="code docutils literal notranslate"><span class="pre">filter_function</span></code>.</p>
+</div>
+<div class="section" id="coloring-functions">
+<h2>Coloring functions<a class="headerlink" href="#coloring-functions" title="Permalink to this headline">¶</a></h2>
+<p>Nodes can be colored in many different ways</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;SIZE of node&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;attr&quot;</span><span class="o">:</span> <span class="s2">&quot;size&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="../index.html">
+              <img class="logo" src="../_static/logo.png" alt="Logo"/>
+            </a></p>
+<form class="search" action="../search.html" method="get">
+  <input type="text" name="q"
+   placeholder="type to search" />
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+
+<a href=https://github.com/MapperInteractive>
+    <p class="caption"><span class="caption-text">
+        <img src="../_static/gh_logo.png" 
+        height="18px" 
+        width="18px" alt="Github icon">  
+        MapperInteractive
+    </span></p>
+</a> 
+
+<p class="caption"><span class="caption-text">User Guide:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../general/about.html">About</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/about.html#citations">Citations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/customization/index.html">Configurations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../general/reference.html">API Reference</a></li>
+</ul>
+<p class="caption"><span class="caption-text">KM User Guide:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Kepler Mapper Interactive</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="started.html">Getting Started Guide</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">KM Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#form-loader">Form loader</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#coloring-functions">Coloring functions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+  <div class="related bottom">
+  <nav id="rellinks">
+    <ul>
+        <li>
+          &larr;
+          <a href="started.html" title="Previous document">Getting Started Guide</a>
+        </li>
+    </ul>
+  </nav>
+  <nav id="breadcrumbs">
+    <ul>
+      <li><a href="../index.html">Mapper Interactive</a></li>
+      <li>
+        <a href="index.html">Kepler Mapper Interactive</a>
+      </li> 
+    </ul>
+  </nav>
+  </div>
+  <footer id="pagefooter">&copy; 2019, Yaodong Zhao and Nathaniel Saul.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a>
+      1.8.5.
+
+  </footer>
+
+  
+  </body>
+</html>
